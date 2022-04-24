@@ -1,0 +1,52 @@
+.Login {
+  height: calc(100vh - var(--header-height));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Login .Forms {
+  width: 95%;
+  padding: unset;
+}
+
+.Login .Forms .form {
+  width: 40%;
+}
+
+@media (max-width: 991px) {
+  .Login .Forms .form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 575px) {
+  .Login .Forms .form {
+    width: 85%;
+  }
+}
+
+.Login .Forms .form .sign_in {
+  text-align: start;
+  display: block;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.Login .Forms .form .sign_in span {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.Login .Forms .form .sign_in span:hover {
+  text-decoration: underline;
+}

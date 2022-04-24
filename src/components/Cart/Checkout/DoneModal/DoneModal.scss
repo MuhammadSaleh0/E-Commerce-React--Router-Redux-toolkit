@@ -1,0 +1,48 @@
+.DoneModal {
+    width: 80%;
+    margin: 7rem auto 0;
+    display: inline-block;
+
+}
+
+.Successful-purchase {
+    max-width: 100%;
+
+    img {
+        width: 30%;
+    }
+}
+
+.Congratulations {
+    margin: 1rem;
+
+    h4 {
+        font-weight: lighter;
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+    }
+
+    p {
+        color: var(--muted);
+
+    }
+}
+
+.Products_page {
+    cursor: pointer;
+    background-color: var(--main-color-2);
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    transition: var(--transition);
+    width: fit-content;
+    margin: 1.4rem auto;
+    color: white;
+    letter-spacing: 1px;
+
+    &:hover {
+        background-color: var(--main-color);
+        color: black;
+        transform: scale(1.1);
+    }
+}

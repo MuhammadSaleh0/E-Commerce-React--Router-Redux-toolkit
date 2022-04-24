@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  position: relative;
+}
+
+.heart_Scale {
+  animation: heartScale .2s linear;
+}

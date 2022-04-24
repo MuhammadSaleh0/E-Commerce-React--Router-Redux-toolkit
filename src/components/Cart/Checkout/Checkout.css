@@ -1,0 +1,444 @@
+.check_out {
+  width: 100%;
+}
+
+.bar {
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  background-color: var(--bg-2);
+  z-index: 100;
+}
+
+.progress_bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10000;
+}
+
+.line {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  color: var(--text);
+  background-color: black;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transform: translateY(9px);
+          transform: translateY(9px);
+}
+
+.light_line {
+  background-color: white;
+}
+
+.green_line {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(22, 173, 48, 0.651)), color-stop(0%, white));
+  background: linear-gradient(to right, rgba(22, 173, 48, 0.651) 50%, white 0%);
+}
+
+.green_line > div .one {
+  border-color: green !important;
+  background-color: green !important;
+}
+
+.completed {
+  background: unset;
+  background-color: rgba(5, 255, 47, 0.651) !important;
+}
+
+.completed > div:not(:last-child) div:nth-child(2) {
+  border-color: green !important;
+  background-color: green !important;
+}
+
+.ConfirmPayment {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(22, 173, 48, 0.651)), color-stop(0%, white));
+  background: linear-gradient(to right, rgba(22, 173, 48, 0.651) 50%, white 0%);
+}
+
+.ConfirmPayment > div:nth-child(2) div:nth-child(2) {
+  border-color: rgba(249, 252, 95, 0.932) !important;
+  background-color: rgba(249, 252, 95, 0.932) !important;
+}
+
+.paymentDone {
+  background: unset;
+  background-color: rgba(5, 255, 47, 0.651) !important;
+}
+
+.paymentDone > div:not(:last-child) div:nth-child(2) {
+  border-color: green !important;
+  background-color: green !important;
+}
+
+.done {
+  background: unset;
+  background-color: rgba(5, 255, 47, 0.651) !important;
+}
+
+.done > div div:nth-child(2) {
+  border-color: green !important;
+  background-color: green !important;
+}
+
+.line > div {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+}
+
+.line > div:nth-child(1) {
+  left: -47px;
+  top: -47px;
+}
+
+.line > div:nth-child(3) {
+  right: -35px;
+  top: -47px;
+}
+
+.line > div:nth-child(2) {
+  right: 45%;
+  top: -47px;
+}
+
+.line > div div:nth-child(2) {
+  color: black;
+}
+
+.line > div > :nth-child(2) {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid red;
+  z-index: 10;
+  background-color: white;
+}
+
+.one,
+.two,
+.three {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.one img,
+.two img,
+.three img {
+  width: 20px;
+  height: 100%;
+}
+
+.PaymentMethod {
+  position: fixed;
+  width: 100%;
+  height: 6.5rem;
+  margin-top: 5rem;
+  background-color: var(--bg-2);
+  z-index: 10000;
+  padding-top: 1rem;
+}
+
+.methods {
+  position: relative;
+  width: 80%;
+  margin-top: .3rem;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-shadow: 1px 1px 26px black;
+          box-shadow: 1px 1px 26px black;
+  padding: .2rem 0;
+}
+
+.methods .choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.methods .choices > div label {
+  padding-left: .5rem;
+}
+
+.methods .master_card img {
+  width: 60px;
+  height: 60px;
+  max-width: 100%;
+}
+
+.methods_dark {
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.24);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.24);
+}
+
+.Forms {
+  width: 95%;
+  margin: auto;
+  padding-top: 5rem;
+}
+
+.form {
+  display: inline-block;
+  width: 70%;
+  margin: 2rem auto;
+  -webkit-box-shadow: 1px 1px 26px black;
+          box-shadow: 1px 1px 26px black;
+  padding: 2rem;
+}
+
+@media (max-width: 575px) {
+  .form {
+    width: 90%;
+  }
+}
+
+.form_dark {
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.24);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.24);
+}
+
+.forms_grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.info_text {
+  margin-bottom: 1rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding-inline: 2rem;
+}
+
+.info_text::after, .info_text::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(var(--main-color)), to(var(--main-color-2)));
+  background: linear-gradient(to right, var(--main-color), var(--main-color-2));
+  -webkit-animation: rotate_ball 1s infinite alternate ease;
+          animation: rotate_ball 1s infinite alternate ease;
+}
+
+.info_text::after {
+  right: 0;
+}
+
+.info_text::before {
+  left: 0;
+}
+
+.personal_info::before {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 2px;
+  bottom: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  right: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(var(--main-color)), to(var(--main-color-2)));
+  background: linear-gradient(to right, var(--main-color), var(--main-color-2));
+}
+
+.half_width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 575px) {
+  .half_width {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.half_width > div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.half_width > div input {
+  width: 100%;
+}
+
+.full_width input {
+  width: 100%;
+}
+
+.contact_info h3 {
+  margin-top: 1.5rem;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  margin-bottom: 0.25rem;
+  display: block;
+  text-align: left;
+  font-size: .8rem;
+  font-style: italic;
+}
+
+.control p {
+  text-align: left;
+  font-size: small;
+  line-height: 1.4;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.control input {
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding-inline: 10px;
+}
+
+.control input:focus {
+  border-color: var(--main-color-2);
+  outline: 1px;
+}
+
+.cash_delivry {
+  display: inline-block;
+  width: 70%;
+  height: 300px;
+  margin: 12rem auto 0;
+}
+
+.cash_delivry .text {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cash_delivry .text h5 {
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.action button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--main-color-2);
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.action button:hover,
+.action button:active {
+  background-color: var(--main-color);
+  color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.invalid label {
+  color: #ca3e51 !important;
+}
+
+.invalid input {
+  border-color: #aa0b20 !important;
+  background-color: #ffeff1 !important;
+}
+
+@-webkit-keyframes rotate_ball {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate_ball {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

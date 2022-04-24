@@ -1,0 +1,312 @@
+@import "../../../Sass/mixin";
+
+.cart_data {
+    // height: calc(100vh - var(--header-height));
+    position: relative;
+    color: var(--header);
+    transition: var(--transition);
+    animation: showModal .3s linear;
+
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        background-color: var(--muted);
+        transition: var(--transition);
+
+        @include breakepoints(medium) {
+            flex-direction: column-reverse;
+        }
+
+        .cart_elements {
+
+            flex-basis: 65%;
+            max-height: 100%;
+            border-radius: 10px;
+            background-color: var(--header-text);
+
+            @include breakepoints(medium) {
+                width: 100%;
+            }
+
+
+
+            h2 {
+                margin-bottom: 3rem;
+                padding: 1rem 0;
+                text-transform: uppercase;
+            }
+
+            .cart_products {
+                padding: 0 2rem;
+
+                @include breakepoints(medium) {
+                    // flex-direction: column;
+                    padding: 0 .8rem;
+                }
+
+                .cart_content {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 2rem 0;
+                    position: relative;
+                    gap: 3rem;
+
+
+                    @include breakepoints(medium) {
+                        flex-direction: column;
+                        padding: .7rem 0;
+                        margin-top: 1rem;
+                        gap: .5rem;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 3px;
+                        width: 70%;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: linear-gradient(to right,
+                                var(--main-color),
+                                var(--main-color-2));
+
+                    }
+
+
+
+
+                    .image {
+                        // flex-basis: 30%;
+
+                        img {
+                            max-width: 100%;
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 20px;
+
+                            @include breakepoints(medium) {
+                                // flex-direction: column;
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+
+                    .item_data {
+                        flex-grow: 1;
+                        text-align: center;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+
+                        @include breakepoints(medium) {
+                            font-size: .68rem;
+                            justify-content: space-around;
+                        }
+
+                        @include breakepoints(mobile) {
+                            justify-content: space-between;
+                        }
+
+
+                        .title_price {
+
+                            display: flex;
+                            flex-direction: column;
+
+                            h4 {
+                                // line-height: 1.6;
+                                letter-spacing: 1px;
+                                // margin-bottom: 1rem;
+                            }
+
+                            @include breakepoints(medium) {
+                                text-align: center;
+                            }
+
+                            .product_price {
+                                .gross {
+                                    display: inline-block;
+                                    text-decoration: line-through;
+                                    color: red;
+                                    margin-right: 1rem;
+                                }
+                            }
+                        }
+
+
+                        .buttons {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0rem;
+
+
+                            .quantity {
+                                padding-inline: .4rem;
+                                font-size: larger;
+                            }
+
+                            .remove_item,
+                            .add_item {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 20px;
+                                height: 20px;
+                                padding: .3rem;
+                                border: 1px solid var(--header);
+                                cursor: pointer;
+                                transition: var(--transition);
+                            }
+
+                            .add_item {
+                                &:hover {
+                                    background-color: var(--main-color);
+                                }
+                            }
+
+                            .remove_item {
+                                &:hover {
+                                    background-color: var(--main-color-2);
+                                }
+                            }
+                        }
+
+                        .delete {
+                            cursor: pointer;
+
+                            img {
+                                width: 20px;
+                                transition: var(--transition);
+
+                                &:hover {
+                                    filter: brightness(2);
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+        .amount_quantity {
+            flex: 35%;
+            padding: 1rem;
+            background-color: var(--header-text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+
+            @include breakepoints(medium) {
+                width: 100%;
+            }
+
+
+            h2 {
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+            }
+
+
+
+            .total_quantity,
+            .total_amount {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+                font-weight: bolder;
+                letter-spacing: 1px;
+            }
+
+            .total_amount {
+
+                gap: .3rem;
+
+                .money {
+                    color: green;
+                }
+            }
+
+
+
+            .check_out_btn {
+                transition: var(--transition);
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+
+            .ckeckOut_link {
+                background-color: var(--main-color);
+                padding: .4rem 1.5rem;
+                border-radius: 10px;
+                transition: var(--transition);
+            }
+
+            .dark {
+                color: white;
+                background-color: var(--main-color-2);
+            }
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.hideModal {
+    animation: hideModal .3s linear;
+}
+
+
+@keyframes hideModal {
+
+    100% {
+        top: -100%;
+    }
+}
+
+@keyframes showModal {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 5rem;
+    }
+}
+
+.empty {
+    text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+}

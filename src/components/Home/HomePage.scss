@@ -1,0 +1,108 @@
+@import "../../Sass/mixin";
+
+.homePage {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--bg-2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: var(--transition);
+
+    @include breakepoints(mobile) {
+        // height: auto;
+    }
+
+    &>.image_groupe_2,
+    .image_groupe_1 {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &>div {
+            width: 60px;
+            height: 100%;
+
+            img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: rotate(10deg);
+            }
+        }
+
+    }
+
+
+    .circle_images {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        overflow: hidden;
+        border: 8px solid var(--main-color);
+        border-left-color: var(--main-color-2);
+        border-bottom-color: var(--main-color-2);
+        box-shadow: 10px 10px 30px rgb(0, 0, 0);
+        transition: var(--transition);
+        animation: border_colors 1s linear infinite alternate;
+
+
+        .circle_img {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            animation: Slide_up 60s infinite linear alternate;
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    .overley {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: contrast(55%) blur(3px);
+        z-index: 10;
+    }
+}
+
+
+
+@keyframes scalee {
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes Slide_up {
+    100% {
+        transform: translateY(-6000%);
+    }
+}
+
+@keyframes border_colors {
+    100% {
+        border-top-color: var(--main-color-2);
+        border-right-color: var(--main-color-2);
+        border-left-color: var(--main-color);
+        border-bottom-color: var(--main-color);
+    }
+}

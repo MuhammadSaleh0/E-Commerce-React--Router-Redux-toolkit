@@ -1,0 +1,22 @@
+.favorite_list {
+  width: 100%;
+  padding: 1rem;
+}
+
+.favorite_list h1 {
+  margin-bottom: 2rem;
+}
+
+.favorite_list .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.3rem;
+}
+
+.no_products {
+  padding: 2.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}

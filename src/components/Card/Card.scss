@@ -1,0 +1,97 @@
+@import "../../Sass/mixin";
+
+.card {
+    text-align: start;
+    box-shadow: var(--card-shadow);
+    position: relative;
+
+    .image {
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 300px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            overflow: hidden;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+
+
+    p {
+        line-height: 1.4;
+        font-size: .9rem;
+        color: var(--muted);
+    }
+
+    .price {
+        font-weight: bolder;
+    }
+
+    p,
+    .price {
+        padding: 0 .3rem;
+    }
+
+
+
+    .favorite {
+        position: absolute;
+        right: 1rem;
+        bottom: 0;
+        transform: translateY(-30%);
+        width: 30px;
+        height: 30px;
+        background-color: hsl(0, 0%, 88%);
+        border-radius: 50%;
+        color: var(--bg);
+        transition: var(--transition);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
+        .image_favorite {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+
+            img {
+                width: 17px;
+                height: 17px;
+
+            }
+        }
+
+        .heart_Scale {
+            animation: heartScale .2s linear;
+        }
+    }
+
+    .remove_fav {
+        background-color: hsl(0, 0%, 93%);
+
+        .image_favorite {
+            img {
+                filter: brightness(0.1);
+            }
+        }
+    }
+}
+
+@keyframes heartScale {
+
+    100% {
+        transform: scale(1.3);
+    }
+}

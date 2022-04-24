@@ -1,0 +1,103 @@
+@import "../../Sass/mixin";
+
+
+.categories {
+    position: relative;
+    flex-basis: 15%;
+    margin-top: 7rem;
+    background-color: var(--bg-2);
+    border-radius: 20px;
+    z-index: 10;
+
+    @include breakepoints(mobile) {
+        position: sticky;
+        top: 54px;
+        bottom: 14px;
+        height: 83vh;
+        flex-basis: unset;
+        padding-block: 1rem;
+        border-right: 2px solid var(--main-color);
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+
+
+        @include breakepoints(mobile) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cate_link {
+            transition: var(--transition);
+            width: 100%;
+
+            @include breakepoints(mobile) {
+                padding: unset;
+            }
+
+            &:hover {
+                background-color: var(--cate-bg);
+                transform: translateX(10px);
+                border-radius: 20px;
+
+                @include breakepoints(mobile) {
+                    transform: rotate(10deg);
+                }
+            }
+
+            li {
+                text-align: start;
+                padding: .5rem .3rem;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+
+                @include breakepoints(large) {
+                    justify-content: space-between;
+                    padding-inline: 1rem;
+                }
+
+
+                .image_cate {
+                    width: 30px;
+                    height: 30px;
+                    transition: var(--transition);
+
+                    @include breakepoints(mobile) {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+                .light {
+                    img {
+                        transition: var(--transition);
+                        filter: invert(1);
+                    }
+
+                }
+
+                .name {
+                    display: none;
+
+                    @include breakepoints(large) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .active {
+            color: white;
+            background: linear-gradient(20deg, var(--main-color), var(--main-color-2));
+            border: 2px solid var(--main-color);
+        }
+
+    }
+
+}

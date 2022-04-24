@@ -1,0 +1,43 @@
+.NavPages {
+  margin: 2rem;
+}
+
+.NavPages .Nav_ul {
+  padding: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NavPages .Nav_ul a {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .8rem;
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.NavPages .Nav_ul a:hover {
+  background-color: var(--header);
+  color: var(--header-text);
+}

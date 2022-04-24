@@ -1,0 +1,113 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: var(--overley-2);
+    animation: fade_in 500ms forwards;
+}
+
+.modal_item {
+    position: absolute;
+    right: 2rem;
+    top: 0rem;
+    width: 200px;
+    height: 190px;
+    color: var(--text);
+    animation: slide_up 500ms forwards;
+    background-color: var(--bg);
+    z-index: 100;
+    border-radius: 10px;
+    text-transform: lowercase;
+    line-height: 1.4;
+    font-size: .9rem;
+    padding: .4rem 0;
+
+
+    .img {
+        width: 100%;
+        height: 68%;
+        margin: 0 auto;
+        border-radius: 10px;
+
+        img {
+            max-height: 100%;
+            // object-fit: contain;
+            border-radius: 10px;
+        }
+    }
+
+    .go_to_cart {
+        background-color: var(--main-color);
+        padding: .3rem .6rem;
+        margin: .3rem auto;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: var(--transition);
+        width: fit-content;
+        color: var(--muted);
+        color: rgb(26, 26, 26);
+
+        &:hover {
+            background-color: #2e9975;
+
+        }
+    }
+
+    small {
+        padding: .2rem 0;
+        font-size: initial;
+    }
+}
+
+
+.close_Modal {
+    animation: slide_down 500ms forwards !important;
+}
+
+.close_overLey {
+    animation: fade_out 500ms forwards !important;
+}
+
+@keyframes slide_up {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide_down {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-150%);
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

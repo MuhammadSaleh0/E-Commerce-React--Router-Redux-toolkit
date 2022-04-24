@@ -1,0 +1,59 @@
+@import "../../../Sass/mixin";
+
+.cart {
+    color: var(--header-text);
+    cursor: pointer;
+
+
+
+    .cart-image {
+        width: 45px;
+        position: relative;
+
+        @include breakepoints(mobile) {
+            width: 40px;
+        }
+
+        span {
+            position: absolute;
+            // font-weight: bolder;
+            top: 0px;
+            right: -5px;
+            // transform: translateX(-20%);
+            background-color: red;
+            border-radius: 50%;
+            line-height: 1;
+            font-size: .9rem;
+            padding: .18rem;
+            z-index: 10;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            transition: var(--transition);
+        }
+
+        .white_cart {
+            filter: invert(1);
+            transition: var(--transition);
+        }
+    }
+
+
+    @include breakepoints(mobile) {
+        font-size: 14px;
+    }
+}
+
+.cartScale {
+    animation: cartScale .1s linear;
+}
+
+@keyframes cartScale {
+    100% {
+        transform: scale(1.2);
+
+    }
+}

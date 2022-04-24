@@ -1,0 +1,44 @@
+@import "../../Sass/mixin";
+
+.Login {
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Forms {
+        width: 95%;
+        padding: unset;
+
+        .form {
+            width: 40%;
+
+            @include breakepoints(medium) {
+                width: 60%;
+            }
+
+            @include breakepoints(mobile) {
+                width: 85%;
+            }
+
+            // .forms_grid {}
+            .sign_in {
+                text-align: start;
+                // margin-left: auto;
+                display: block;
+                transition: var(--transition);
+                display: block;
+                margin-bottom: 1rem;
+
+                span {
+                    transition: var(--transition);
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
