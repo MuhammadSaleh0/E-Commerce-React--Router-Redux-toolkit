@@ -80,7 +80,7 @@ export const listOfCategories = [
 const Categories = (props) => {
     const dark = useSelector((state) => state.boolean.isDark);
     const ScrollTopHandler = () => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 550);
     };
 
     const { category } = useParams();
