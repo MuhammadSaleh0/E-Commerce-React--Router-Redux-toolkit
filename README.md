@@ -12,11 +12,12 @@
 ![desktop](./public/img/allproducs.PNG "desktop") &nbsp;
 ![desktop](./public/img/item.PNG "desktop") &nbsp;
 ![desktop](./public/img/cart.PNG "desktop") &nbsp;
-![desktop](./public/img/cart3.PNG "desktop") &nbsp;
 ![desktop](./public/img/cartForm.PNG "desktop") &nbsp;
+![desktop](./public/img/cart3.PNG "desktop") &nbsp;
 ![desktop](./public/img/cartFomr2.PNG"desktop") &nbsp;
-![desktop](./public/img/fav.PNG "desktop") &nbsp;
 ![desktop](./public/img/Done.PNG "desktop") &nbsp;
+![desktop](./public/img/fav.PNG "desktop") &nbsp;
+
 
 - ## Moblie
 ![mobile](./public/img/mobile1.PNG "mobile") &nbsp;
