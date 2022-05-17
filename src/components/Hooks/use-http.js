@@ -14,7 +14,7 @@ const useHttp = () => {
         method: 'GET',
         url: url
           ? url
-          : 'https://baradox-a4d03-default-rtdb.firebaseio.com/products.json',
+          : 'https://paradox-data-default-rtdb.firebaseio.com/products.json',
         headers: {
           'Content-Type': 'application/json',
         },

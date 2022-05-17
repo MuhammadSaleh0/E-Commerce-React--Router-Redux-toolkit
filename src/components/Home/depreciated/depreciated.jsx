@@ -15,10 +15,7 @@ const Depreciated_2 = () => {
 
 
 
-
-
-
-    return <div className="homePage">
+    return <div className="Depreciated_2">
         <div className="orpit">
 
             <div className="logo_img">

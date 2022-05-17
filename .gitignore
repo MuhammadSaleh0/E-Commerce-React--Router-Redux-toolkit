@@ -12,8 +12,9 @@
 /build
 
 #unused files
-/Home/depreciated
-/Home/page_depreciated
+/src/components/Home/page_depreciated/page_depreciated.jsx
+
+/page_depreciated.jsx
 
 
 #firebase
