@@ -4,7 +4,7 @@ export const GetData = () => {
     return async (dispatch) => {
         const fetchData = async () => {
             const response = await fetch(
-                'https://paradox-data-default-rtdb.firebaseio.com/cart.json'
+                'https://baradox-da-default-rtdb.firebaseio.com/cart.json'
             );
             if (!response.ok) {
                 throw new Error('failed to pring Data Cart');
@@ -30,7 +30,7 @@ export const SentDataCart = (cart) => {
     return async (dispatch) => {
         const sentRequest = async () => {
             const response = await fetch(
-                'https://paradox-data-default-rtdb.firebaseio.com/cart.json',
+                'https://baradox-da-default-rtdb.firebaseio.com/cart.json',
                 {
                     method: 'PUT',
                     body: JSON.stringify({

@@ -37,7 +37,7 @@ const AllProducts = () => {
         if (searchValue === '') {
             const getData = async () => {
                 const res = await fetch(
-                    `https://paradox-data-default-rtdb.firebaseio.com/Data/${page ? page : 'page_1'
+                    `https://baradox-da-default-rtdb.firebaseio.com/Data/${page ? page : 'page_1'
                     }.json`,
                     { method: 'GET' }
                 );

@@ -21,7 +21,7 @@ const ProductDetails = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const url = `https://paradox-data-default-rtdb.firebaseio.com/products/${item_id}.json`;
+            const url = `https://baradox-da-default-rtdb.firebaseio.com/products/${item_id}.json`;
             const ItemObject = await sentRequest(url);
             dispatch(
                 ProductActions.getProductItem({
